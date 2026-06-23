@@ -394,8 +394,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
 - 💼 Role: Software Engineer
 - 📍 Location: Bengaluru, India
-- 🔗 GitHub: [@boopathi](https://github.com/boopathi)
-- 💬 LinkedIn: [linkedin.com/in/boopathi](https://linkedin.com/in/boopathi)
+- 🔗 GitHub: [@boopathi](https://github.com/boopathiskv/SecureVault)
+- 💬 LinkedIn: [linkedin.com/in/boopathi](https://linkedin.com/in/boopathiskv)
 
 ---
 
