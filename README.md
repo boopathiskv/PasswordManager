@@ -95,7 +95,7 @@ SecureVault uses **3 layers of encryption** stacked together using the browser-n
                  ↓
 ┌─────────────────────────────────────────┐
 │  Layer 1: AES-GCM 256-bit               │
-│  • PBKDF2 (100,000 iterations)          │
+│  • PBKDF2 (600,000 iterations)          │
 │  • Random 16-byte salt                  │
 │  • Random 12-byte IV                    │
 │  • Authenticated encryption             │
