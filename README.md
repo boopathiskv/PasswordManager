@@ -152,7 +152,7 @@ SecureVault uses **3 layers of encryption** stacked together using the browser-n
 
 ```bash
 # 1. Clone or download the repo
-git clone https://github.com/yourusername/securevault.git
+git clone https://github.com/boopathiskv/PasswordManager
 
 # 2. Open in browser
 cd securevault
@@ -325,7 +325,12 @@ console.log("Decrypted:", dec);  // → "HelloWorld"
 ---
 
 ## 📋 Changelog
-
+### 🆕 v5.0.0 — June 2026 (Current)
+- ✨ Added **CSP** 
+- 🚫 Added "No password recovery" notice
+- 📜 Added PBKDF2 (100,000 iterations)  to PBKDF2 (600,000 iterations)
+- 📜 Added not use In line Css, Js and xss 
+- 🔒 Updated Name: _"SecureVault to Password Manager"_
 ### 🆕 v2.1.0 — June 2026 (Current)
 - ✨ Added **About popup** (ℹ️ icon in topbar)
 - ⚠️ Added prominent **risk warning & disclaimer** box
