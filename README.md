@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔐 SecureVault
+# 🔐 Password Manager
 
 ### Enterprise Password Manager — 100% Offline. Zero Dependencies.
 
