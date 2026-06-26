@@ -122,7 +122,7 @@ SecureVault uses **3 layers of encryption** stacked together using the browser-n
 
 | Attack | Defense |
 |--------|---------|
-| 🔓 Brute force PIN | PBKDF2 100k iterations (~6 days per record) |
+| 🔓 Brute force PIN | PBKDF2 600k iterations (~6 days per record) |
 | 🎯 Rainbow tables | Random 16-byte salt per record |
 | 🔁 Pattern analysis | Random 12-byte IV per encryption |
 | ✂️ Tampering | AES-GCM authentication tag |
@@ -399,7 +399,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 
 - 💼 Role: Software Engineer
 - 📍 Location: Bengaluru, India
-- 🔗 GitHub: [@boopathiskv](https://github.com/boopathiskv/SecureVault)
+- 🔗 GitHub: [@boopathiskv](https://github.com/boopathiskv/PasswordManager)
 - 💬 LinkedIn: [linkedin.com/in/boopathiskv](https://linkedin.com/in/boopathiskv)
 
 ---
