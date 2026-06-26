@@ -21,7 +21,7 @@
 
 ## 📖 About
 
-> SecureVault is a 100% offline, static single-page password manager built with pure HTML5, CSS3, and vanilla JavaScript. Features multi-layer encryption (AES-GCM 256 + PBKDF2 100k + XOR + Base64), per-record 6-digit PIN protection, enterprise dashboard UI, CRUD, search, categories, import/export — zero dependencies, zero CDN, runs from a USB stick.
+> SecureVault is a 100% offline, static single-page password manager built with pure HTML5, CSS3, and vanilla JavaScript. Features multi-layer encryption (AES-GCM 256 + PBKDF2 600k + XOR + Base64), per-record 6-digit PIN protection, enterprise dashboard UI, CRUD, search, categories, import/export — zero dependencies, zero CDN, runs from a USB stick.
 
 ---
 
