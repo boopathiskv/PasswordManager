@@ -541,27 +541,54 @@
 
   /* ===== Import / Export ===== */
   async function exportJSON() {
-    if (data.length === 0) return toast('⚠️ No data to export', 'error');
-    const key = await askKey('🔐 Export Encryption Key', 'Enter a strong passphrase (min 6 chars)');
-    if (!key) return toast('❌ Export cancelled', 'error');
-    if (key.length < 6) return toast('⚠️ Key must be at least 6 characters', 'error');
-    try {
-      const plain = JSON.stringify(data, null, 2);
-      const encrypted = await encryptData(plain, key);
-      const blob = new Blob([encrypted], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'securevault.enc.json';
-      a.rel = 'noopener';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
-      toast('⬇️🔒 Exported & encrypted');
-    } catch { toast('❌ Encryption failed', 'error'); }
-  }
+  if (data.length === 0) return toast('⚠️ No data to export', 'error');
 
+  const key = await askKey('🔐 Export Encryption Key', 'Enter a strong passphrase (min 6 chars)');
+  if (!key) return toast('❌ Export cancelled', 'error');
+  if (key.length < 6) return toast('⚠️ Key must be at least 6 characters', 'error');
+
+  try {
+    const plain = JSON.stringify(data, null, 2);
+    const encrypted = await encryptData(plain, key);
+
+    // ✅ DateTime formatter: yy-mm-dd-hh-mm-ss-AM/PM
+      const now = new Date();
+
+      const yy = String(now.getFullYear()).slice(-2);
+      const mm = String(now.getMonth() + 1).padStart(2, '0');
+      const dd = String(now.getDate()).padStart(2, '0');
+
+      let hours = now.getHours();
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12 || 12;
+
+      const hh = String(hours).padStart(2, '0');
+
+      // ✅ Optimized filename
+      const fileName = `pwdm-${yy}${mm}${dd}-${hh}${minutes}${seconds}${ampm}.enc.json`;
+
+    const blob = new Blob([encrypted], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fileName;
+    a.rel = 'noopener';
+
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+    toast('⬇️🔒 Exported & encrypted');
+  } catch {
+    toast('❌ Encryption failed', 'error');
+  }
+}
   async function importJSON(e) {
     const f = e.target.files[0];
     if (!f) return;
