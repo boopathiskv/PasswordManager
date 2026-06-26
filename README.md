@@ -56,7 +56,7 @@
 
 ### 🔐 Security
 - ✅ **Multi-layer encryption** (AES-GCM 256 + XOR + Base64)
-- ✅ **PBKDF2** key derivation (100,000 iterations)
+- ✅ **PBKDF2** key derivation (600,000 iterations)
 - ✅ **6-digit PIN** protection per record
 - ✅ PIN required for **View / Copy / Edit / Delete**
 - ✅ **Auto-hide** passwords after 8 seconds
